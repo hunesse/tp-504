@@ -1,5 +1,13 @@
-print ( " Hello , World ! " )
+import fonctions as f
 
-while true:
-	x =int(input("Saisir le nombre a mettre au carré"))
-	print (pow(x,2))
+#print ( " Hello , World ! " )
+
+a =int(input("Saisir le nombre a mettre au carré"))
+b =int(input("Saisir l'exposant"))
+print(f.puissance(a,b))
+	
+#while True:
+#	x =int(input("Saisir le nombre a mettre au carré"))
+#	print (pow(x,2))
+	
+
