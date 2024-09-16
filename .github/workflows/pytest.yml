@@ -12,4 +12,4 @@ jobs:
       - name: afficher le nom de la branche
         run : echo "Nom branche:${{github.ref}}"
       - name: afficher l'OS
-        run: echo "Le système d'exploitation est : ${{ runner.os }}"
+        run: echo "OS:${{ runner.os}}"
