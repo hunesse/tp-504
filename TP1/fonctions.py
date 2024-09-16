@@ -5,8 +5,8 @@ def puissance(a,b):
 	#return a**b
 	
 
-	if not type(a) is float:
-		if not type(b) is float:
+	if not type(a) is int:
+		if not type(b) is int:
 			a**b
 	else:
 		if b == 0:
