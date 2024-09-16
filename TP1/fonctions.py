@@ -8,7 +8,7 @@ def puissance(a,b):
 	if not type(a) is float:
 		if not type(b) is float:
 			a**b
-	else
+	else:
 		if b == 0:
 			return 1
 		elif b > 0:
