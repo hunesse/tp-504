@@ -11,6 +11,7 @@ public class ServerUDP {
                 sock.receive(packet);
                 String str = new String(packet.getData()); 
                 System.out.println("str = " + str);
+                sock.send(packet);
             }
         }catch(Exception ex){System.out.println("ALARME!!!");}
     }
