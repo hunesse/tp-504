@@ -1,7 +1,7 @@
 import java.io.*;
 import java.net.*;
 
-public class ServerUDP {
+public class ServeurUDP {
     public static void main(String[] args){
         try{
             DatagramSocket sock = new DatagramSocket(1234);
