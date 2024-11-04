@@ -12,8 +12,8 @@ public class ClientUDP{
             DatagramSocket sock = new DatagramSocket();
             sock.send(packet);
             sock.receive(packet);
-                String str = new String(packet.getData()); 
-                System.out.println("str = " + str);
+            String str = new String(packet.getData()); 
+            System.out.println("str = " + str);
         }catch(Exception ex){System.out.println("ALARME!!!");}
     }
 }
