@@ -1,0 +1,18 @@
+Q1.3 - QEMU emulator version 7.2.0 
+Q1.7 - cat /etc/group
+Q1.8 - sudo usermod -a -G libvirt <username>
+Q1.9 - sudo apt install vagrant
+
+Q2.1 - generic/debian11
+Q2.2 - Le nom de l'utilisateur qu'il l'as poste
+Le nombre de téléchargement
+La derniere version
+Les possibilité de téléchargement
+Q2.3 - 
+Q2.4 -
+Q2.5 - 1,3G
+Q2.6 - who i am
+Q2.7 - pwd
+Q2.9 - vagrant global-status
+Q2.10 - 60K
+Q2.11 -
