@@ -12,7 +12,6 @@ db_config = {
     'port': '3306'
 }
 
-# Initialize MySQL connection
 conn = mysql.connector.connect(**db_config)
 cursor = conn.cursor() 
 
@@ -23,10 +22,6 @@ def index():
     query = "SELECT * FROM myTable"
     cursor.execute(query)
     data = cursor.fetchall()
-    
-    # Close the cursor and connection
-    cursor.close()
-    conn.close()
     
     return render_template('index.html', data=data)
 
