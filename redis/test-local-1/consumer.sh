@@ -1,11 +1,27 @@
-redis-cli DBSIZE >/dev/null
-if ! [ $? = 0 ]
-then
-	echo "Erreur, pas de connection avec le serveur redis!"
-exit 1
+#!/bin/bash
+
+QUEUE_NAME="mafile"
+BURST_SIZE=1000
+BURST_DELAY=3  
+REDIS_CLI="redis-cli"
+
+$REDIS_CLI DBSIZE >/dev/null
+if ! [ $? = 0 ]; then
+  echo "Erreur, pas de connection avec le serveur redis!"
+  exit 1
+fi
+
 while :
-	for ((i=0;i<n;i++))
-	do
-		redis-cli LPUSH mafile $RANDOM
+do
+  echo "Envoi d’un burst de $BURST_SIZE valeurs..."
+  for ((i=0; i<BURST_SIZE; i++)); do
+    $REDIS_CLI LPUSH "$QUEUE_NAME" $RANDOM >/dev/null
+  done
+
+  TAILLE=$($REDIS_CLI LLEN "$QUEUE_NAME")
+  echo "Taille actuelle de la file : $TAILLE"
+
+  # Pause entre les bursts
+  sleep "$BURST_DELAY"
 done
 
